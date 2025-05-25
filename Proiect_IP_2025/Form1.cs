@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proiect_IP_2025.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,65 @@ namespace Proiect_IP_2025
 {
     public partial class Form1 : Form
     {
+        private MusicController controller;
+        private MusicModel model;
+
         public Form1()
         {
             InitializeComponent();
+
+            model = new MusicModel();
+            controller = new MusicController(model, QueueList, SongLabelTitle, ArtistLabel);
         }
 
-        
+        private void AddMusicButton_Click(object sender, EventArgs e)
+        {
+            controller.AddSong();
+
+        }
+
+        private void QueueList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            controller.SelectSong(QueueList.SelectedIndex);
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SongLabelTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ArtistLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Previous_Click(object sender, EventArgs e)
+        {
+            controller.Previous();
+        }
+
+        private void Play_StopButton_Click(object sender, EventArgs e)
+        {
+            controller.PlayPause();
+
+        }
+
+        private void NextButton_Click(object sender, EventArgs e)
+        {
+            controller.Next();
+
+        }
+
+        private void VolumeBar_Scroll(object sender, EventArgs e)
+        {
+            controller.SetVolume(VolumeBar.Value / 100f);
+
+        }
     }
 }

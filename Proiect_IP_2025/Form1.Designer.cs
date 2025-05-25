@@ -49,6 +49,7 @@
             this.Play_StopButton.TabIndex = 0;
             this.Play_StopButton.Text = "Play";
             this.Play_StopButton.UseVisualStyleBackColor = true;
+            this.Play_StopButton.Click += new System.EventHandler(this.Play_StopButton_Click);
             // 
             // Previous
             // 
@@ -58,6 +59,7 @@
             this.Previous.TabIndex = 1;
             this.Previous.Text = "Previous";
             this.Previous.UseVisualStyleBackColor = true;
+            this.Previous.Click += new System.EventHandler(this.Previous_Click);
             // 
             // NextButton
             // 
@@ -67,6 +69,7 @@
             this.NextButton.TabIndex = 2;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
             // pictureBox1
             // 
@@ -75,6 +78,7 @@
             this.pictureBox1.Size = new System.Drawing.Size(354, 323);
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // SongLabelTitle
             // 
@@ -85,6 +89,7 @@
             this.SongLabelTitle.Size = new System.Drawing.Size(185, 42);
             this.SongLabelTitle.TabIndex = 4;
             this.SongLabelTitle.Text = "TitleSong";
+            this.SongLabelTitle.Click += new System.EventHandler(this.SongLabelTitle_Click);
             // 
             // VolumeBar
             // 
@@ -92,6 +97,7 @@
             this.VolumeBar.Name = "VolumeBar";
             this.VolumeBar.Size = new System.Drawing.Size(354, 56);
             this.VolumeBar.TabIndex = 5;
+            this.VolumeBar.Scroll += new System.EventHandler(this.VolumeBar_Scroll);
             // 
             // ArtistLabel
             // 
@@ -102,6 +108,7 @@
             this.ArtistLabel.Size = new System.Drawing.Size(131, 29);
             this.ArtistLabel.TabIndex = 6;
             this.ArtistLabel.Text = "ArtistName";
+            this.ArtistLabel.Click += new System.EventHandler(this.ArtistLabel_Click);
             // 
             // QueueList
             // 
@@ -111,6 +118,7 @@
             this.QueueList.Name = "QueueList";
             this.QueueList.Size = new System.Drawing.Size(252, 276);
             this.QueueList.TabIndex = 7;
+            this.QueueList.SelectedIndexChanged += new System.EventHandler(this.QueueList_SelectedIndexChanged);
             // 
             // AddMusicButton
             // 
@@ -120,6 +128,7 @@
             this.AddMusicButton.TabIndex = 8;
             this.AddMusicButton.Text = "Add Music...";
             this.AddMusicButton.UseVisualStyleBackColor = true;
+            this.AddMusicButton.Click += new System.EventHandler(this.AddMusicButton_Click);
             // 
             // Form1
             // 
