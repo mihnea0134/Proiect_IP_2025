@@ -1,0 +1,11 @@
+C:\Users\Mihnea\Desktop\Proiect_IP_2025\bin\Debug\Proiect_IP_2025.exe.config
+C:\Users\Mihnea\Desktop\Proiect_IP_2025\bin\Debug\Proiect_IP_2025.exe
+C:\Users\Mihnea\Desktop\Proiect_IP_2025\bin\Debug\Proiect_IP_2025.pdb
+C:\Users\Mihnea\Desktop\Proiect_IP_2025\obj\Debug\Proiect_IP_2025.csproj.AssemblyReference.cache
+C:\Users\Mihnea\Desktop\Proiect_IP_2025\obj\Debug\Proiect_IP_2025.csproj.SuggestedBindingRedirects.cache
+C:\Users\Mihnea\Desktop\Proiect_IP_2025\obj\Debug\Proiect_IP_2025.Properties.Resources.resources
+C:\Users\Mihnea\Desktop\Proiect_IP_2025\obj\Debug\Proiect_IP_2025.csproj.GenerateResource.cache
+C:\Users\Mihnea\Desktop\Proiect_IP_2025\obj\Debug\Proiect_IP_2025.csproj.CoreCompileInputs.cache
+C:\Users\Mihnea\Desktop\Proiect_IP_2025\obj\Debug\Proiect_IP_2025.exe
+C:\Users\Mihnea\Desktop\Proiect_IP_2025\obj\Debug\Proiect_IP_2025.pdb
+C:\Users\Mihnea\Desktop\Proiect_IP_2025\obj\Debug\Proiect_IP_2025.Form1.resources
