@@ -21,7 +21,6 @@ namespace Proiect_IP_2025
             InitializeComponent();
 
             model = new MusicModel();
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom; // Auto-resizes image to fit
             VolumeBar.Minimum = 0;
             VolumeBar.Maximum = 100;
             VolumeBar.Value = 50; // Default volume: 50%
