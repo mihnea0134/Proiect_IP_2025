@@ -1,8 +1,11 @@
 ﻿using NAudio.Wave;
 using Proiect_IP_2025;
 using System;
+using System.Linq;
 using System.Windows.Forms;
-
+using TagLib;
+using System.Drawing;
+using System.IO;   
 namespace Proiect_IP_2025.Controller
 {
     public class MusicController
@@ -11,16 +14,22 @@ namespace Proiect_IP_2025.Controller
         private readonly ListBox queueList;
         private readonly Label songLabel;
         private readonly Label artistLabel;
+        private readonly TrackBar volumeBar;
+
 
         private IWavePlayer outputDevice;
         private AudioFileReader audioFile;
+        private readonly PictureBox albumArtBox; 
 
-        public MusicController(MusicModel model, ListBox queueList, Label songLabel, Label artistLabel)
+        public MusicController(MusicModel model, ListBox queueList, Label songLabel, Label artistLabel, PictureBox albumArtBox, TrackBar volumeBar)
         {
             this.model = model;
             this.queueList = queueList;
             this.songLabel = songLabel;
             this.artistLabel = artistLabel;
+            this.albumArtBox = albumArtBox;
+            this.volumeBar = volumeBar;
+
         }
 
         public void AddSong()
@@ -55,10 +64,35 @@ namespace Proiect_IP_2025.Controller
             if (song != null)
             {
                 audioFile = new AudioFileReader(song);
+
                 outputDevice = new WaveOutEvent();
                 outputDevice.Init(audioFile);
                 outputDevice.Play();
+                // Extract metadata using TagLib
+                var file = TagLib.File.Create(song);
+                songLabel.Text = file.Tag.Title ?? System.IO.Path.GetFileNameWithoutExtension(song);
+                artistLabel.Text = file.Tag.FirstPerformer ?? "Unknown Artist";
 
+                // Handle album art
+                if (file.Tag.Pictures.Length > 0)
+                {
+                    var picture = file.Tag.Pictures[0];
+                    using (var ms = new System.IO.MemoryStream(picture.Data.Data))
+                    {
+                        var image = Image.FromStream(ms);
+                        // We need to invoke this on the UI thread
+                        songLabel.Invoke((MethodInvoker)delegate {
+                            songLabel.Parent.Controls.OfType<PictureBox>().First().Image = image;
+                        });
+                    }
+                }
+                else
+                {
+                    // Clear the pictureBox if no image found
+                    songLabel.Invoke((MethodInvoker)delegate {
+                        songLabel.Parent.Controls.OfType<PictureBox>().First().Image = null;
+                    });
+                }
                 songLabel.Text = System.IO.Path.GetFileNameWithoutExtension(song);
                 artistLabel.Text = "Unknown Artist"; // simplificare
                 queueList.SelectedIndex = model.CurrentIndex;

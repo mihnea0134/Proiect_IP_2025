@@ -46,3 +46,6 @@ C:\Users\Mihnea\Source\Repos\mihnea0134\Proiect_IP_2025\Proiect_IP_2025\bin\Debu
 C:\Users\Mihnea\Source\Repos\mihnea0134\Proiect_IP_2025\Proiect_IP_2025\bin\Debug\System.Security.AccessControl.xml
 C:\Users\Mihnea\Source\Repos\mihnea0134\Proiect_IP_2025\Proiect_IP_2025\bin\Debug\System.Security.Principal.Windows.xml
 C:\Users\Mihnea\Source\Repos\mihnea0134\Proiect_IP_2025\Proiect_IP_2025\obj\Debug\Proiect_IP_2025.csproj.CopyComplete
+C:\Users\Mihnea\Source\Repos\mihnea0134\Proiect_IP_2025\Proiect_IP_2025\bin\Debug\TagLibSharp.dll
+C:\Users\Mihnea\Source\Repos\mihnea0134\Proiect_IP_2025\Proiect_IP_2025\bin\Debug\TagLibSharp.pdb
+C:\Users\Mihnea\Source\Repos\mihnea0134\Proiect_IP_2025\Proiect_IP_2025\bin\Debug\TagLibSharp.xml
