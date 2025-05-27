@@ -1,6 +1,6 @@
 .vs
-Proiect_IP_2025\bin\Debug\*.exe
-Proiect_IP_2025\bin\Debug\*.exe.config
-Proiect_IP_2025\bin\Debug\*.pdb
-Proiect_IP_2025\.vs
-Proiect_IP_2025\obj
+Proiect_IP_2025/bin/Debug/*.exe
+Proiect_IP_2025/bin/Debug/*.exe.config
+Proiect_IP_2025/bin/Debug/*.pdb
+Proiect_IP_2025/.vs
+Proiect_IP_2025/obj
