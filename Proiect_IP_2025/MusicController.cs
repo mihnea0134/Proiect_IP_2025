@@ -5,7 +5,10 @@ using System.Linq;
 using System.Windows.Forms;
 using TagLib;
 using System.Drawing;
-using System.IO;   
+using System.IO;
+using System.Collections.Generic;
+
+ 
 namespace Proiect_IP_2025.Controller
 {
     public class MusicController
@@ -15,10 +18,11 @@ namespace Proiect_IP_2025.Controller
         private readonly Label songLabel;
         private readonly Label artistLabel;
         private readonly TrackBar volumeBar;
+        private readonly ListBox playlistList;
 
         private readonly TrackBar positionBar;
         private readonly Label timeLabel;
-        private System.Windows.Forms.Timer progressTimer;
+        private Timer progressTimer;
         private bool isUserSeeking = false;
 
 
@@ -27,7 +31,7 @@ namespace Proiect_IP_2025.Controller
         private readonly PictureBox albumArtBox; 
 
         public MusicController(MusicModel model, ListBox queueList, Label songLabel,
-                               Label artistLabel, PictureBox albumArtBox, TrackBar volumeBar, TrackBar positionBar, Label timeLabel)
+                               Label artistLabel, PictureBox albumArtBox, TrackBar volumeBar, TrackBar positionBar, Label timeLabel,ListBox playlistList)
         {
             this.model = model;
             this.queueList = queueList;
@@ -37,6 +41,7 @@ namespace Proiect_IP_2025.Controller
             this.volumeBar = volumeBar;
             this.positionBar = positionBar;
             this.timeLabel = timeLabel;
+            this.playlistList = playlistList;
             // Initialize timer for progress updates
             progressTimer = new Timer { Interval = 250 }; // Update every 250ms
             progressTimer.Tick += UpdateProgress;
@@ -86,11 +91,11 @@ namespace Proiect_IP_2025.Controller
             {
                 foreach (var file in ofd.FileNames)
                 {
-                    model.AddSong(file);
-                    queueList.Items.Add(System.IO.Path.GetFileName(file));
+                    model.AddSongToCurrentPlaylist(file);
+                    queueList.Items.Add(Path.GetFileName(file));
                 }
 
-                if (model.CurrentIndex == -1 && model.Playlist.Count > 0)
+                if (model.CurrentIndex == -1 && model.Queue.Count > 0)
                 {
                     model.CurrentIndex = 0;
                     PlayCurrent();
@@ -175,7 +180,7 @@ namespace Proiect_IP_2025.Controller
 
         public void SelectSong(int index)
         {
-            if (index >= 0 && index < model.Playlist.Count)
+            if (index >= 0 && index < model.Queue.Count)
             {
                 // Only restart if it's a NEW song selection
                 if (model.CurrentIndex != index || outputDevice?.PlaybackState != PlaybackState.Playing)
@@ -195,5 +200,50 @@ namespace Proiect_IP_2025.Controller
             audioFile?.Dispose();
             audioFile = null;
         }
+
+        public void CreatePlaylist(string name)
+        {
+            model.AddPlaylist(name);
+            playlistList.Items.Add(name);
+        }
+
+        public void SelectPlaylist(string name)
+        {
+            if (model.Playlists.ContainsKey(name))
+            {
+                model.CurrentPlaylistName = name;
+                model.Queue.Clear();
+                model.Queue.AddRange(model.Playlists[name]);
+                model.CurrentIndex = 0;
+
+                queueList.Items.Clear();
+                foreach (var song in model.Queue)
+                    queueList.Items.Add(Path.GetFileName(song));
+            }
+        }
+
+        public void SavePlaylists(string path)
+        {
+            var json = Newtonsoft.Json.JsonConvert.SerializeObject(model.Playlists);
+            System.IO.File.WriteAllText(path, json);
+        }
+
+        public void LoadPlaylists(string path)
+        {
+            if (System.IO.File.Exists(path))
+            {
+                var json = System.IO.File.ReadAllText(path);
+                var data = Newtonsoft.Json.JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(json);
+                model.Playlists.Clear();
+                foreach (var kvp in data)
+                {
+                    model.Playlists[kvp.Key] = kvp.Value;
+                    playlistList.Items.Add(kvp.Key);
+                }
+            }
+        }
+
+
+
     }
 }

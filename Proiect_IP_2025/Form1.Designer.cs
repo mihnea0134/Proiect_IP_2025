@@ -42,6 +42,10 @@
             this.TimeLabel = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.playlistList = new System.Windows.Forms.ListBox();
+            this.CreatePlaylist = new System.Windows.Forms.Button();
+            this.SavePlaylist = new System.Windows.Forms.Button();
+            this.LoadPlaylist = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.VolumeBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PositionBar)).BeginInit();
@@ -191,11 +195,50 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(23, 393);
+            this.label3.Location = new System.Drawing.Point(146, 381);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 16);
             this.label3.TabIndex = 13;
             this.label3.Text = "Playlists";
+            // 
+            // playlistList
+            // 
+            this.playlistList.FormattingEnabled = true;
+            this.playlistList.ItemHeight = 16;
+            this.playlistList.Location = new System.Drawing.Point(149, 400);
+            this.playlistList.Name = "playlistList";
+            this.playlistList.Size = new System.Drawing.Size(152, 228);
+            this.playlistList.TabIndex = 14;
+            this.playlistList.SelectedIndexChanged += new System.EventHandler(this.playlistList_SelectedIndexChanged);
+            // 
+            // CreatePlaylist
+            // 
+            this.CreatePlaylist.Location = new System.Drawing.Point(22, 439);
+            this.CreatePlaylist.Name = "CreatePlaylist";
+            this.CreatePlaylist.Size = new System.Drawing.Size(101, 23);
+            this.CreatePlaylist.TabIndex = 15;
+            this.CreatePlaylist.Text = "Create Playlist";
+            this.CreatePlaylist.UseVisualStyleBackColor = true;
+            this.CreatePlaylist.Click += new System.EventHandler(this.CreatePlaylist_Click);
+            // 
+            // SavePlaylist
+            // 
+            this.SavePlaylist.Location = new System.Drawing.Point(22, 482);
+            this.SavePlaylist.Name = "SavePlaylist";
+            this.SavePlaylist.Size = new System.Drawing.Size(101, 23);
+            this.SavePlaylist.TabIndex = 16;
+            this.SavePlaylist.Text = "Save Playlist";
+            this.SavePlaylist.UseVisualStyleBackColor = true;
+            this.SavePlaylist.Click += new System.EventHandler(this.SavePlaylist_Click);
+            // 
+            // LoadPlaylist
+            // 
+            this.LoadPlaylist.Location = new System.Drawing.Point(22, 530);
+            this.LoadPlaylist.Name = "LoadPlaylist";
+            this.LoadPlaylist.Size = new System.Drawing.Size(101, 23);
+            this.LoadPlaylist.TabIndex = 17;
+            this.LoadPlaylist.Text = "Load Playlist";
+            this.LoadPlaylist.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -203,6 +246,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SlateBlue;
             this.ClientSize = new System.Drawing.Size(802, 673);
+            this.Controls.Add(this.LoadPlaylist);
+            this.Controls.Add(this.SavePlaylist);
+            this.Controls.Add(this.CreatePlaylist);
+            this.Controls.Add(this.playlistList);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.TimeLabel);
@@ -242,6 +289,10 @@
         private System.Windows.Forms.Label TimeLabel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListBox playlistList;
+        private System.Windows.Forms.Button CreatePlaylist;
+        private System.Windows.Forms.Button SavePlaylist;
+        private System.Windows.Forms.Button LoadPlaylist;
     }
 }
 

@@ -24,7 +24,7 @@ namespace Proiect_IP_2025
             VolumeBar.Minimum = 0;
             VolumeBar.Maximum = 100;
             VolumeBar.Value = 50; // Default volume: 50%
-            controller = new MusicController(model, QueueList, SongLabelTitle, ArtistLabel,pictureBox1,VolumeBar,PositionBar,TimeLabel);
+            controller = new MusicController(model, QueueList, SongLabelTitle, ArtistLabel,pictureBox1,VolumeBar,PositionBar,TimeLabel,playlistList);
         }
 
         private void AddMusicButton_Click(object sender, EventArgs e)
@@ -83,6 +83,39 @@ namespace Proiect_IP_2025
         }
 
         private void TimeLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CreatePlaylist_Click(object sender, EventArgs e)
+        {
+            using (Form2 form = new Form2())
+            {
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+                    string playlistName = form.PlaylistNameResult;
+                    List<string> songs = form.SelectedSongs;
+
+                    controller.CreatePlaylist(playlistName);
+                    foreach (var song in songs)
+                    {
+                        model.Playlists[playlistName].Add(song);
+                    }
+
+                    playlistList.SelectedItem = playlistName;
+                    controller.SelectPlaylist(playlistName);
+                }
+            }
+        }
+
+        
+
+        private void SavePlaylist_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void playlistList_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

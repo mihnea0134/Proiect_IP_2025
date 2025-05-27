@@ -8,7 +8,7 @@ namespace Proiect_IP_2025
 {
     public class MusicModel
     {
-        public List<string> Playlist { get; } = new List<string>();
+        public List<string> Queue { get; } = new List<string>();
         public int CurrentIndex { get; set; } = -1;
 
 
@@ -16,25 +16,47 @@ namespace Proiect_IP_2025
         {
             get
             {
-                if (CurrentIndex >= 0 && CurrentIndex < Playlist.Count)
-                    return Playlist[CurrentIndex];
+                if (CurrentIndex >= 0 && CurrentIndex < Queue.Count)
+                    return Queue[CurrentIndex];
                 return null;
             }
         }
         public void AddSong(string path)
         {
-            Playlist.Add(path);
+            Queue.Add(path);
         }
 
         public void Next()
         {
-            if (Playlist.Count > 0)
-                CurrentIndex = (CurrentIndex + 1) % Playlist.Count;
+            if (Queue.Count > 0)
+                CurrentIndex = (CurrentIndex + 1) % Queue.Count;
         }
         public void Previous()
         {
-            if (Playlist.Count > 0)
-                CurrentIndex = (CurrentIndex - 1 + Playlist.Count) % Playlist.Count;
+            if (Queue.Count > 0)
+                CurrentIndex = (CurrentIndex - 1 + Queue.Count) % Queue.Count;
         }
+        public Dictionary<string, List<string>> Playlists { get; } = new Dictionary<string, List<string>>();
+        public string CurrentPlaylistName { get; set; } = "Default";
+
+        public void AddPlaylist(string name)
+        {
+            if (!Playlists.ContainsKey(name))
+                Playlists[name] = new List<string>();
+        }
+
+        public void AddSongToCurrentPlaylist(string path)
+        {
+            AddSong(path);
+            if (!Playlists.ContainsKey(CurrentPlaylistName))
+                Playlists[CurrentPlaylistName] = new List<string>();
+            Playlists[CurrentPlaylistName].Add(path);   
+        }
+
+        public List<string> GetCurrentPlaylistSongs()
+        {
+            return Playlists.ContainsKey(CurrentPlaylistName) ? Playlists[CurrentPlaylistName] : new List<string>();
+        }
+
     }
 }
