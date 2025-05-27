@@ -1,6 +1,6 @@
 ﻿namespace Proiect_IP_2025
 {
-    partial class Form1
+    partial class MediaPlayerForm
     {
         /// <summary>
         /// Required designer variable.
@@ -171,7 +171,7 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // Form1
+            // MediaPlayerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -189,8 +189,9 @@
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.Previous);
             this.Controls.Add(this.Play_StopButton);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MediaPlayerForm";
+            this.Text = "Media Player";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.VolumeBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Timeframe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

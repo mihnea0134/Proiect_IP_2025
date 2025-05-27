@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace Proiect_IP_2025
 {
-    public partial class Form1 : Form
+    public partial class MediaPlayerForm : Form
     {
         private MusicController controller;
         private MusicModel model;
 
-        public Form1()
+        public MediaPlayerForm()
         {
             InitializeComponent();
 
@@ -74,6 +74,11 @@ namespace Proiect_IP_2025
         private void VolumeBar_Scroll(object sender, EventArgs e)
         {
             controller.SetVolume(VolumeBar.Value / 100f);
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
         }
     }
