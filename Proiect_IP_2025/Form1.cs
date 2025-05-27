@@ -24,7 +24,7 @@ namespace Proiect_IP_2025
             VolumeBar.Minimum = 0;
             VolumeBar.Maximum = 100;
             VolumeBar.Value = 50; // Default volume: 50%
-            controller = new MusicController(model, QueueList, SongLabelTitle, ArtistLabel,pictureBox1,VolumeBar);
+            controller = new MusicController(model, QueueList, SongLabelTitle, ArtistLabel,pictureBox1,VolumeBar,PositionBar,TimeLabel);
         }
 
         private void AddMusicButton_Click(object sender, EventArgs e)
@@ -74,6 +74,16 @@ namespace Proiect_IP_2025
         private void VolumeBar_Scroll(object sender, EventArgs e)
         {
             controller.SetVolume(VolumeBar.Value / 100f);
+
+        }
+
+        private void PositionBar_Scroll(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TimeLabel_Click(object sender, EventArgs e)
+        {
 
         }
     }

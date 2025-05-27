@@ -16,12 +16,18 @@ namespace Proiect_IP_2025.Controller
         private readonly Label artistLabel;
         private readonly TrackBar volumeBar;
 
+        private readonly TrackBar positionBar;
+        private readonly Label timeLabel;
+        private System.Windows.Forms.Timer progressTimer;
+        private bool isUserSeeking = false;
+
 
         private IWavePlayer outputDevice;
         private AudioFileReader audioFile;
         private readonly PictureBox albumArtBox; 
 
-        public MusicController(MusicModel model, ListBox queueList, Label songLabel, Label artistLabel, PictureBox albumArtBox, TrackBar volumeBar)
+        public MusicController(MusicModel model, ListBox queueList, Label songLabel,
+                               Label artistLabel, PictureBox albumArtBox, TrackBar volumeBar, TrackBar positionBar, Label timeLabel)
         {
             this.model = model;
             this.queueList = queueList;
@@ -29,6 +35,42 @@ namespace Proiect_IP_2025.Controller
             this.artistLabel = artistLabel;
             this.albumArtBox = albumArtBox;
             this.volumeBar = volumeBar;
+            this.positionBar = positionBar;
+            this.timeLabel = timeLabel;
+            // Initialize timer for progress updates
+            progressTimer = new Timer { Interval = 250 }; // Update every 250ms
+            progressTimer.Tick += UpdateProgress;
+
+            // Handle user seeking
+            positionBar.Scroll += (s, e) => {
+                if (audioFile != null && !isUserSeeking)
+                {
+                    isUserSeeking = true;
+                    audioFile.CurrentTime = TimeSpan.FromSeconds(positionBar.Value);
+                    isUserSeeking = false;
+                }
+            };
+        }
+
+
+        private void UpdateProgress(object sender, EventArgs e)
+        {
+            if (audioFile == null || isUserSeeking) return;
+
+            // Update trackbar max duration (if song length changes)
+            if (positionBar.Maximum != (int)audioFile.TotalTime.TotalSeconds)
+                positionBar.Maximum = (int)audioFile.TotalTime.TotalSeconds;
+
+            // Update current position
+            positionBar.Value = (int)audioFile.CurrentTime.TotalSeconds;
+
+            // Update time label (e.g., "0:32 / 3:45")
+            timeLabel.Text = $"{audioFile.CurrentTime:mm\\:ss} / {audioFile.TotalTime:mm\\:ss}";
+
+            if (audioFile.CurrentTime.TotalSeconds >= audioFile.TotalTime.TotalSeconds - 0.1)
+            {
+                Next(); // Auto-play next song when current ends
+            }
 
         }
 
@@ -95,6 +137,10 @@ namespace Proiect_IP_2025.Controller
                 }
                 songLabel.Text = System.IO.Path.GetFileNameWithoutExtension(song);
                 artistLabel.Text = "Unknown Artist"; // simplificare
+                                                     // Initialize position bar
+                positionBar.Maximum = (int)audioFile.TotalTime.TotalSeconds;
+                positionBar.Value = 0;
+                progressTimer.Start(); // Start updating progress
                 queueList.SelectedIndex = model.CurrentIndex;
             }
         }
@@ -131,8 +177,12 @@ namespace Proiect_IP_2025.Controller
         {
             if (index >= 0 && index < model.Playlist.Count)
             {
-                model.CurrentIndex = index;
-                PlayCurrent();
+                // Only restart if it's a NEW song selection
+                if (model.CurrentIndex != index || outputDevice?.PlaybackState != PlaybackState.Playing)
+                {
+                    model.CurrentIndex = index;
+                    PlayCurrent();
+                }
             }
         }
 
@@ -141,7 +191,7 @@ namespace Proiect_IP_2025.Controller
             outputDevice?.Stop();
             outputDevice?.Dispose();
             outputDevice = null;
-
+            progressTimer.Stop();
             audioFile?.Dispose();
             audioFile = null;
         }
