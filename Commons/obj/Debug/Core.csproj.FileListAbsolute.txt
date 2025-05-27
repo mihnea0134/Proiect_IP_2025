@@ -1,0 +1,6 @@
+C:\Users\cosmi\Proiect_IP_2025\Commons\bin\Debug\Commons.dll
+C:\Users\cosmi\Proiect_IP_2025\Commons\bin\Debug\Commons.pdb
+C:\Users\cosmi\Proiect_IP_2025\Commons\obj\Debug\Core.csproj.AssemblyReference.cache
+C:\Users\cosmi\Proiect_IP_2025\Commons\obj\Debug\Core.csproj.CoreCompileInputs.cache
+C:\Users\cosmi\Proiect_IP_2025\Commons\obj\Debug\Commons.dll
+C:\Users\cosmi\Proiect_IP_2025\Commons\obj\Debug\Commons.pdb

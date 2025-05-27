@@ -1,0 +1,151 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\cosmi\\Proiect_IP_2025\\Proiect_IP_2025\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6C67D10A-B187-484E-B2EB-9580B2DDAC30}|..\\Server\\Server.csproj|c:\\users\\cosmi\\proiect_ip_2025\\server\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7573097-B25F-48EE-90DA-2FD3179302A4}|..\\ServerService\\ServerService.csproj|c:\\users\\cosmi\\proiect_ip_2025\\serverservice\\serverservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F79D50A4-DE53-4123-9857-14AB29207CC0}|MediaPlayer.csproj|c:\\users\\cosmi\\proiect_ip_2025\\proiect_ip_2025\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F79D50A4-DE53-4123-9857-14AB29207CC0}|MediaPlayer.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F79D50A4-DE53-4123-9857-14AB29207CC0}|MediaPlayer.csproj|c:\\users\\cosmi\\proiect_ip_2025\\proiect_ip_2025\\musiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F79D50A4-DE53-4123-9857-14AB29207CC0}|MediaPlayer.csproj|solutionrelative:musiccontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F79D50A4-DE53-4123-9857-14AB29207CC0}|MediaPlayer.csproj|c:\\users\\cosmi\\proiect_ip_2025\\proiect_ip_2025\\musicmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F79D50A4-DE53-4123-9857-14AB29207CC0}|MediaPlayer.csproj|solutionrelative:musicmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4E69CDE-4B19-4BC4-97DC-05B11E567408}|..\\Commons\\Commons.csproj|c:\\users\\cosmi\\proiect_ip_2025\\commons\\models\\audiomedia.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E4E69CDE-4B19-4BC4-97DC-05B11E567408}|..\\Commons\\Core.csproj|c:\\users\\cosmi\\proiect_ip_2025\\commons\\models\\playlist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F79D50A4-DE53-4123-9857-14AB29207CC0}|MediaPlayer.csproj|c:\\users\\cosmi\\proiect_ip_2025\\proiect_ip_2025\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F79D50A4-DE53-4123-9857-14AB29207CC0}|MediaPlayer.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ServerService.cs",
+              "DocumentMoniker": "C:\\Users\\cosmi\\Proiect_IP_2025\\ServerService\\ServerService.cs",
+              "RelativeDocumentMoniker": "..\\ServerService\\ServerService.cs",
+              "ToolTip": "C:\\Users\\cosmi\\Proiect_IP_2025\\ServerService\\ServerService.cs",
+              "RelativeToolTip": "..\\ServerService\\ServerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T07:47:15.441Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Server.cs",
+              "DocumentMoniker": "C:\\Users\\cosmi\\Proiect_IP_2025\\Server\\Server.cs",
+              "RelativeDocumentMoniker": "..\\Server\\Server.cs",
+              "ToolTip": "C:\\Users\\cosmi\\Proiect_IP_2025\\Server\\Server.cs",
+              "RelativeToolTip": "..\\Server\\Server.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T07:39:42.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\cosmi\\Proiect_IP_2025\\Proiect_IP_2025\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\cosmi\\Proiect_IP_2025\\Proiect_IP_2025\\Form1.cs",
+              "RelativeToolTip": "Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T07:05:19.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\cosmi\\Proiect_IP_2025\\Proiect_IP_2025\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\cosmi\\Proiect_IP_2025\\Proiect_IP_2025\\Form1.cs [Design]",
+              "RelativeToolTip": "Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T07:05:18.135Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MusicController.cs",
+              "DocumentMoniker": "C:\\Users\\cosmi\\Proiect_IP_2025\\Proiect_IP_2025\\MusicController.cs",
+              "RelativeDocumentMoniker": "MusicController.cs",
+              "ToolTip": "C:\\Users\\cosmi\\Proiect_IP_2025\\Proiect_IP_2025\\MusicController.cs",
+              "RelativeToolTip": "MusicController.cs",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAwwA0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T00:22:49.223Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MusicModel.cs",
+              "DocumentMoniker": "C:\\Users\\cosmi\\Proiect_IP_2025\\Proiect_IP_2025\\MusicModel.cs",
+              "RelativeDocumentMoniker": "MusicModel.cs",
+              "ToolTip": "C:\\Users\\cosmi\\Proiect_IP_2025\\Proiect_IP_2025\\MusicModel.cs",
+              "RelativeToolTip": "MusicModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T00:22:37.219Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Playlist.cs",
+              "DocumentMoniker": "C:\\Users\\cosmi\\Proiect_IP_2025\\Commons\\Models\\Playlist.cs",
+              "RelativeDocumentMoniker": "..\\Commons\\Models\\Playlist.cs",
+              "ToolTip": "C:\\Users\\cosmi\\Proiect_IP_2025\\Commons\\Models\\Playlist.cs",
+              "RelativeToolTip": "..\\Commons\\Models\\Playlist.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-27T00:21:34.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AudioMedia.cs",
+              "DocumentMoniker": "C:\\Users\\cosmi\\Proiect_IP_2025\\Commons\\Models\\AudioMedia.cs",
+              "RelativeDocumentMoniker": "..\\Commons\\Models\\AudioMedia.cs",
+              "ToolTip": "C:\\Users\\cosmi\\Proiect_IP_2025\\Commons\\Models\\AudioMedia.cs",
+              "RelativeToolTip": "..\\Commons\\Models\\AudioMedia.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-26T23:48:33.235Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
