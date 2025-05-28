@@ -44,7 +44,7 @@
   <ItemGroup>
     <Compile Include="CreatePlaylistPresenter.cs" />
     <Compile Include="DownloadPlaylistPresenter.cs" />
-    <Compile Include="MediaPlayerPresenter.cs" />
+    <Compile Include="AudioMediaPlayerPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

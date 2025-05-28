@@ -1,7 +1,6 @@
 ﻿using MediaPlayer.Core.Interfaces;
 using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Windows.Forms;
 
 namespace MediaPlayer.Presenter
@@ -45,7 +44,7 @@ namespace MediaPlayer.Presenter
                     {
                         try
                         {
-                            selectedMedia.Add(Path.GetFileName(media));
+                            selectedMedia.Add(media);
                         }
                         catch (ArgumentException)
                         {
