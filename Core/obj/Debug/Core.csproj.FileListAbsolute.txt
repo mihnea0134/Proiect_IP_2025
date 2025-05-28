@@ -1,0 +1,16 @@
+D:\IP\Core\obj\Debug\Core.csproj.AssemblyReference.cache
+D:\IP\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
+D:\IP\Core\bin\Debug\Core.dll
+D:\IP\Core\bin\Debug\Core.pdb
+D:\IP\Core\bin\Debug\System.Memory.dll
+D:\IP\Core\bin\Debug\System.Text.Json.dll
+D:\IP\Core\bin\Debug\System.Numerics.Vectors.dll
+D:\IP\Core\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\IP\Core\bin\Debug\System.Buffers.dll
+D:\IP\Core\bin\Debug\System.ValueTuple.dll
+D:\IP\Core\bin\Debug\System.Text.Encodings.Web.dll
+D:\IP\Core\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\IP\Core\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\IP\Core\obj\Debug\Core.csproj.Up2Date
+D:\IP\Core\obj\Debug\Core.dll
+D:\IP\Core\obj\Debug\Core.pdb
