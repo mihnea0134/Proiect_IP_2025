@@ -22,6 +22,7 @@ namespace MediaPlayer.Model
         public string AddPlaylistLocal(Playlist playlist) => _playlistManager.AddPlaylist(playlist);
         public Playlist GetPlaylistLocal(string name) => _playlistManager.GetPlaylist(name);
         public void RemovePlaylistLocal(string name) => _playlistManager.RemovePlaylist(name);
+        public void RemoveAudioMediaLocal(string playlistName, string audioMediaName) => _playlistManager.RemoveAudioMedia(playlistName, audioMediaName);
         public IEnumerable<Playlist> GetAllLocal() => _playlistManager.GetAll();
 
         // Pentru modelul ce se ocupa de fisiere de pe server
