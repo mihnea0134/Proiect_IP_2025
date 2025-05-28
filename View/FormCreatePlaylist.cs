@@ -4,6 +4,9 @@ using System.Windows.Forms;
 using MediaPlayer.Core.Interfaces;
 using MediaPlayer.Presenter;
 using System.Linq;
+using System.IO;
+using MediaPlayer.Core.Models;
+
 
 namespace MediaPlayer.View
 {
@@ -40,14 +43,15 @@ namespace MediaPlayer.View
             }
             else if (message != "")
             {
-                MessageBox.Show("A fost o eroare la incarcare, selectati din nou.", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                ShowMessage("A fost o eroare la incarcare, selectati din nou.", "Eroare");
             }
         }
 
         public void SetSelectedFiles()
         {
             listBoxSongsForPlaylist.Items.Clear();
-            listBoxSongsForPlaylist.Items.AddRange(SelectedMedia.ToArray());
+            
+            listBoxSongsForPlaylist.Items.AddRange(SelectedMedia.Select(media => Path.GetFileNameWithoutExtension(media)).ToArray());
         }
 
         public void ShowMessage(string message, string title)
@@ -64,11 +68,11 @@ namespace MediaPlayer.View
             }
             catch (ObjectDisposedException)
             {
-                MessageBox.Show("Formul a fost deja inchis!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowMessage("Formul a fost deja inchis!", "Eroare");
             }
             catch (InvalidOperationException)
             {
-                MessageBox.Show("Nu se poate inchide formul!", "Eroare", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowMessage("Nu se poate inchide formul!", "Eroare");
             }
         }
 

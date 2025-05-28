@@ -162,6 +162,8 @@
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(522, 441);
             this.Controls.Add(this.groupBoxPlaylistDownload);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FormDownloadPlaylist";
             this.Text = "Download Playlist";
             this.groupBoxPlaylistDownload.ResumeLayout(false);

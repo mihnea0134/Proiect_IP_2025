@@ -82,9 +82,9 @@
             // buttonAddSongsPlaylist
             // 
             this.buttonAddSongsPlaylist.BackColor = System.Drawing.Color.DarkGray;
-            this.buttonAddSongsPlaylist.Location = new System.Drawing.Point(156, 91);
+            this.buttonAddSongsPlaylist.Location = new System.Drawing.Point(141, 91);
             this.buttonAddSongsPlaylist.Name = "buttonAddSongsPlaylist";
-            this.buttonAddSongsPlaylist.Size = new System.Drawing.Size(106, 32);
+            this.buttonAddSongsPlaylist.Size = new System.Drawing.Size(152, 32);
             this.buttonAddSongsPlaylist.TabIndex = 4;
             this.buttonAddSongsPlaylist.Text = "Adauga fisiere";
             this.buttonAddSongsPlaylist.UseVisualStyleBackColor = false;
@@ -122,6 +122,8 @@
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(495, 418);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "FormCreatePlaylist";
             this.Text = "Create Playlist";
             this.groupBox1.ResumeLayout(false);
