@@ -12,6 +12,7 @@ namespace MediaPlayer.Core.Interfaces
         string AddPlaylistLocal(Playlist playlist);
         Playlist GetPlaylistLocal(string name);
         void RemovePlaylistLocal(string name);
+        void RemoveAudioMediaLocal(string playlistName, string audioMediaName);
         IEnumerable<Playlist> GetAllLocal();
 
         // Pentru modelul ce se ocupa de fisiere de pe server

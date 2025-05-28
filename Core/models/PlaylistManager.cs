@@ -73,6 +73,29 @@ namespace MediaPlayer.Core.Models
             }
         }
 
+        public void RemoveAudioMedia(string playlistName, string audioMediaName)
+        {
+            if (string.IsNullOrWhiteSpace(playlistName) || string.IsNullOrWhiteSpace(audioMediaName))
+            {
+                return;
+            }
+
+            if (_playlists.TryGetValue(playlistName, out var playlist))
+            {
+                var mediaToRemove = playlist.Media.Find(m => m.Title.Equals(audioMediaName, StringComparison.OrdinalIgnoreCase));
+
+                if (mediaToRemove != null)
+                {
+                    playlist.Media.Remove(mediaToRemove);
+                    string errorMessage = SaveToDisk();
+                    if (!string.IsNullOrEmpty(errorMessage))
+                    {
+                        throw new Exception(errorMessage);
+                    }
+                }
+            }
+        }
+
         public IEnumerable<Playlist> GetAll() => _playlists.Values;
 
         private string SaveToDisk()
